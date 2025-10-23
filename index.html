@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples com SweetAlert2</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            padding: 10px;
+            border: 1px dashed #4CAF50;
+            border-radius: 4px;
+            min-height: 20px; /* Garante que ocupe espaço */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Calculadora</h1>
+        
+        <input type="number" id="numero1" placeholder="Primeiro número" value="10">
+        <input type="number" id="numero2" placeholder="Segundo número" value="5">
+        
+        <button onclick="calcular('multiplicacao')">Multiplicar (×)</button>
+        <button onclick="calcular('divisao')">Dividir (÷)</button>
+
+        <hr>
+        
+        <p>Resultado:</p>
+        <div id="resultado">Aguardando cálculo...</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    
+    <script src="calculadora.js"></script>
+</body>
+</html>
